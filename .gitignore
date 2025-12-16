@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+venv/
+ENV/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Output directories
+web_citations/
+ris_citations*/
+test_citations/
+
+# Data files (user-specific)
+*.ris
+!example.ris
+*.txt
+!requirements.txt
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
