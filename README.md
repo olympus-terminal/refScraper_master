@@ -1,6 +1,6 @@
 # Universal Citation Fetcher
 
-Fetch RIS citations from any web URL or academic identifier. Automatically extracts metadata from web pages, APIs, and academic databases to generate properly formatted RIS citations for import into reference managers like Endnote and Zotero.
+Fetch RIS citations from any web URL or academic identifier with a plain text query - like frontier models, but accurate. Automatically extracts metadata from web pages, APIs, and academic databases to generate properly formatted RIS citations for import into reference managers like Endnote and Zotero.
 
 ## Features
 
