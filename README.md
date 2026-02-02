@@ -114,6 +114,41 @@ URL/Identifier Input
     .ris Output
 ```
 
+## Open Access PDF Fetcher
+
+Download PDFs for academic papers using DOIs with multi-source fallback:
+
+```bash
+# Single DOI
+python open_access_pdf_fetcher.py --doi "10.1038/nature12373" -o paper.pdf
+
+# Batch download from JSON
+python open_access_pdf_fetcher.py -i papers.json -d ./pdfs
+
+# Retry failed downloads
+python open_access_pdf_fetcher.py -i papers.json -d ./pdfs --retry-failed
+```
+
+### PDF Sources (in fallback order)
+
+| Source | Coverage | Notes |
+|--------|----------|-------|
+| PubMed Central | ~8M papers | NIH-funded, always free |
+| Europe PMC | ~9M papers | Includes EU-funded |
+| Semantic Scholar | ~200M papers | AI-curated links |
+| Unpaywall | Legal OA | Multiple locations per paper |
+| Publisher patterns | Major journals | PNAS, Nature, Cell, Frontiers, etc. |
+| DOI negotiation | Universal | Content-type based |
+
+### Input JSON format
+
+```json
+[
+  {"doi": "10.1038/nature12373", "title": "Paper Title", "venue": "Nature"},
+  {"doi": "10.1126/science.xxx", "title": "Another Paper", "venue": "Science"}
+]
+```
+
 ## License
 
 MIT
